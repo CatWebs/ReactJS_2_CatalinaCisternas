@@ -8,7 +8,7 @@ function App() {
   return (
     <>
      <Header />
-     <ItemListContainer greeting="Bienvenido a Arañitas Tejedoras" />
+     <ItemListContainer greeting="Hilados Arañitas" />
      <Footer/>
     </>
   )
