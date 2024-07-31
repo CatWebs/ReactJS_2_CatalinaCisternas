@@ -7,23 +7,20 @@
     min-height: 90px;
   }
 
-.header-link:hover{
+.navbar-item:hover{
     color: #9999d2;
     cursor: pointer;
-}
-
-.header-link{
-    text-decoration: none;
-    color: #000;
 }
 
 .navbar-links{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .navbar-item{
     list-style: none;
     margin-right: 20%;
+    color: #000;
 }

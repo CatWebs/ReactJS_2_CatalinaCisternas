@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
     const [itemInfo,setItemInfo]=useState(null);
@@ -7,18 +7,21 @@ function ItemDetailContainer() {
     useEffect(()=>{
         fetch("https://fakestoreapi.com/products/2")
             .then(response=>{
+                console.log(response);
                 if(!response.ok){
-                    throw new Error("Ha ocurrido un error con la API")
+                    throw new Error("Ha ocurrido un error con la API");
                 }
                 return response.json();
             })
-            .then(data=>setItemInfo(data))
+            .then(data=>{
+                console.log(data)
+                setItemInfo(data)})
             .catch(error=>console.error("Error al traer la base de datos:",error));
     },[])
   return (
     <>
     <h2>Detalle del Producto</h2>
-    {itemDetail && <ItemDetail item={itemInfo}/>}
+    {itemInfo && <ItemDetail item={itemInfo}/>}
     </>
   )
 }
