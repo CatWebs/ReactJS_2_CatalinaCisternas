@@ -5,8 +5,8 @@
     font-family: sans-serif;
   }
   
-  body {
-    min-width: 320px;
+  html {
+    min-width: 600px;
   }
   
   

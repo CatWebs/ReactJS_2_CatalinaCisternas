@@ -1,4 +1,4 @@
-const ovillos = [
+const productos = [
     {
         id: 1,
         nombre: "Algodón Color Calipso",
@@ -160,6 +160,12 @@ const ovillos = [
         tipo: "acrilico"
     }
 
-]
+];
 
-export default ovillos;
+export default function fetchData(){
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(productos);
+        }, 3000);
+    });
+};
