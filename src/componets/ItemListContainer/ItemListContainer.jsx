@@ -21,16 +21,8 @@ const [items, setItems] = useState([]);
 const filtro = productos.filter(el => el.categoria === idCategoria)
 
 useEffect(() =>{
-  if(filtro !== undefined){
-    setItems(filtro);
-  }else{
-    setItems(productos);
-  }
+  filtro.length > 0 ? setItems(filtro) : setItems(productos)
 },[]);
-
-
-
-
 
 return (
         <>
