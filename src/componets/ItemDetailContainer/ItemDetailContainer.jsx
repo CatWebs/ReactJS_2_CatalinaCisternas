@@ -15,7 +15,6 @@ function ItemDetailContainer({productos}) {
 		setProductoSeleccionado(findProduct);
 	},[])
     
-    console.log(productoSeleccionado);
 
 	return (
         <>

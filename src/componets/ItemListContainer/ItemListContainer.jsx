@@ -1,10 +1,36 @@
-import React from 'react'
+//import React, { useEffect, useState } from 'react'
 import ItemList from "./ItemList"
 import "./ItemListContainer.css"
+//import { useParams } from 'react-router-dom';
+
+
 
 const ItemListContainer = ({ productos }) => {
- 
-  return (
+
+//const [items, setItems] = useState(productos);
+//useEffect(() => {
+//  const producto = items.filter(idCategoria)
+//}
+
+//,[])
+//const {idCategoria} = useParams()
+
+//const [items, setItems] = useState([]);
+//const filtro = productos.filter(el => el.categoria === idCategoria)
+
+//if(filtro !== undefined){
+//  useEffect(()=>{
+//    setItems(filtro);
+//  },[filtro])
+//}else{
+//  setItems(productos);
+//}
+
+
+
+
+
+return (
         <>
             {
                 ((productos.length) === 0) ?
