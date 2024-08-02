@@ -18,7 +18,7 @@ const ItemListContainer = ({ productos }) => {
 const {idCategoria} = useParams()
 
 const [items, setItems] = useState([]);
-const filtro = productos.filter(el => el.categoria === idCategoria)
+const filtro = productos.filter(el => el.tipo === idCategoria)
 
 useEffect(() =>{
   filtro.length > 0 ? setItems(filtro) : setItems(productos)
