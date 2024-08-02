@@ -15,16 +15,18 @@ const ItemListContainer = ({ productos }) => {
 //,[])
 //const {idCategoria} = useParams()
 
-//const [items, setItems] = useState([]);
-//const filtro = productos.filter(el => el.categoria === idCategoria)
+const {idCategoria} = useParams()
 
-//if(filtro !== undefined){
-//  useEffect(()=>{
-//    setItems(filtro);
-//  },[filtro])
-//}else{
-//  setItems(productos);
-//}
+const [items, setItems] = useState([]);
+const filtro = productos.filter(el => el.categoria === idCategoria)
+
+if(filtro !== undefined){
+  useEffect(()=>{
+    setItems(filtro);
+  },[filtro])
+}else{
+  setItems(productos);
+}
 
 
 
@@ -49,7 +51,7 @@ return (
                       <div className='main-store-container'>
                         <h1>Hilados Arañitas</h1>    
                         <h2>Bienvenido a la comunidad de 'Arañitas Tejedoras'</h2>
-                        <ItemList productos={productos}  />
+                        <ItemList productos={items}  />
                       </div>
                     </>
             }
