@@ -20,13 +20,15 @@ const {idCategoria} = useParams()
 const [items, setItems] = useState([]);
 const filtro = productos.filter(el => el.categoria === idCategoria)
 
-if(filtro !== undefined){
-  useEffect(()=>{
-    setItems(filtro);
-  },[filtro])
-}else{
-  setItems(productos);
-}
+useEffect(() =>
+  if(filtro !== undefined){
+    useEffect(()=>{
+      setItems(filtro);
+    },[filtro])
+  }else{
+    setItems(productos);
+  };
+,[]);
 
 
 
