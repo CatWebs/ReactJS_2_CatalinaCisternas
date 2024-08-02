@@ -22,7 +22,7 @@
 }
 
 .item-card:hover{
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 20px rgba(31, 27, 27, 0.4);
 }
 
 .item-card-img{
@@ -77,7 +77,7 @@
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-  margin: 0 auto; 
+    margin: 0 auto; 
 }
 .texto-cargando{ 
   padding-top:20px
@@ -89,10 +89,11 @@
 .pelotas {
     width: 30px;
     height: 30px;
-    background-color: #FAC8D0;
+    background-color: #9999d2;
+    box-shadow: 0 10px 20px #FAC8D0;
     animation: salto .5s alternate
     infinite;
-  border-radius: 50%  
+    border-radius: 50%  
 }
 .pelotas:nth-child(2) {
     animation-delay: .18s;

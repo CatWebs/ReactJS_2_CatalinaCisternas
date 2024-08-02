@@ -1,7 +1,7 @@
 import Header from './componets/Header/Header'
 import ItemListContainer from './componets/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './componets/ItemDetailContainer/ItemDetailContainer'
 import Footer from './componets/Footer/Footer'
-
 import ErrorPage from './componets/ErrorPage'
 
 import fetchData from "./fetchData"
@@ -26,16 +26,14 @@ function App() {
     <BrowserRouter>
       <Header></Header>
       <Routes>
-        <Route exact path='/' element={<ItemListContainer productos={productos} />}>
-        
-          <Route exact path='/productos/:idCategoria' element={<ItemListContainer/>}/>
-
-          {/*<Route exact path='/productos/:id' element={<ItemDetailContainer/>}/>*/}
-
-          <Route path='*' element={<ErrorPage/>}/>
+        <Route exact path='/' element={<ItemListContainer productos={productos} />}/>
           
-        </Route>
+        {/*<Route exact path='/productos/:idCategoria' element={<ItemListContainer/>}/>*/}
 
+        <Route exact path='/detalle/:id' element={<ItemDetailContainer productos={productos}  />}/>
+
+        <Route path='*' element={<ErrorPage/>}/>
+            
       </Routes>
       <Footer/>
     </BrowserRouter>
