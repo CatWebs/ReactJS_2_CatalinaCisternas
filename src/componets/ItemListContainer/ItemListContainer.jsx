@@ -22,9 +22,7 @@ const filtro = productos.filter(el => el.categoria === idCategoria)
 
 useEffect(() =>{
   if(filtro !== undefined){
-    useEffect(()=>{
-      setItems(filtro);
-    },[filtro])
+    setItems(filtro);
   }else{
     setItems(productos);
   }
