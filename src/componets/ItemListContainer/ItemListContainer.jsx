@@ -22,7 +22,7 @@ const filtro = productos.filter(el => el.tipo === idCategoria)
 
 useEffect(() =>{
   filtro.length > 0 ? setItems(filtro) : setItems(productos)
-},[]);
+},[idCategoria]);
 
 return (
         <>
